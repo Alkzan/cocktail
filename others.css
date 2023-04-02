@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    background: #eee;
+}
+
+
+#addcocktail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#btn_addcocktail {
+    display: flex;
+    background: #2196F3;
+    border: none;
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 1em auto;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+}
+
+#overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.314);
+    position: fixed;
+    z-index: 1;
+    background: rgb(0 0 0 / 25%);
+    backdrop-filter: blur(3px);
+    transition: .3s;
+}
+
+#form {
+    width: 100%;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 0.4em;
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+    width: max-content;
+    top: 3.5em;
+    transition: .3s;
+
+}
+
+#form #elements {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    background: white;
+    padding: 1em;
+    margin: auto;
+}
+
+#form #elements #checkhasdone{
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#form #elements #checkhasdone label{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#form legend {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#form input {
+    border: 0.2em solid lightgrey;
+    outline: none;
+    padding: 0.3em;
+}
+
+#form button {
+    padding: 0.3em;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 10em;
+    cursor: pointer;
+}
+
+#recipe, #recipenohasdone {
+    display: flex;
+    margin: 3em;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    position: relative;
+}
+
+#recipe #cocktail, #recipenohasdone #cocktail {
+    background: white;
+    display: flex;
+    margin: 1em;
+    flex-direction: column;
+    border-radius: 0.3em;
+}
+
+#recipe #cocktail #ptitle, #recipenohasdone #cocktail #ptitle {
+    text-align: center;
+    background: #dbdbdb;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 2em;
+    border-radius: 5px 5px 0px 0px;
+    width: max-content;
+}
+
+#recipe #cocktail p, #recipehasdone #cocktail p {
+    padding: .5em;
+}
+
+#btn_deletecocktail {
+    background: darkred;
+    color: lightgrey;
+    border: none;
+    border-radius: 0px 0px 5px 5px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#btn_showmore {
+    background: black;
+    color: lightgrey;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#btn_deletecocktail:hover, #btn_showmore:hover {
+    color: white;
+}
+
+#dtitle {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#dtitle .btn_updatehasdone {
+    height: max-content;
+    padding: 0.3em;
+    position: absolute;
+    right: 10px;
+    background: white;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+#showMore {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    background: white;
+    justify-content: center;
+    align-items: flex-start;
+    top: 5em;
+}
+
+#sMoreContent {
+    margin-top: 2em;
+}
+
+#sMoreContent #ptitle {
+    margin: 2em;
+}
+
+#sMoreContent span {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border-radius: 100%;
+    background: black;
+    color: white;
+    padding: 0px 7px;
+    margin: auto;
+    cursor: pointer;
+}
+
+textarea {
+    border: 0.2em solid lightgrey;
+    padding: 0.3em;
+    outline: none;
+    max-width: 96%;
+}

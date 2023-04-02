@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="others.css">
+    <script src="others.js" defer></script>
+    <title>Ma page JS</title>
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <section id="addcocktail">
+        <button id="btn_addcocktail">Ajouter un cocktail</button>
+        <form id="form">
+            <div id="elements">
+                <legend>Ajouter un cocktail</legend>
+                <input type="text" id="namec" name="namec" placeholder="Entrez le nom"><br>
+                <textarea name="ingredients" id="ingredients" cols="30" rows="5" placeholder="Entrez les ingredients"></textarea><br>
+                <textarea name="instructions" id="instructions" cols="30" rows="5" placeholder="Entrez les instructions"></textarea><br>
+                <div id="checkHasDone"><label for="hasDone">Déjà fait ? </label><input type="checkbox" id="hasDone" name="hasDone" value="yes"></div><br>                <button type="submit" form="form" id="add">Ajouter</button><br>
+                <p id="error"></p>
+            </div>
+        </form>
+        <div id="showMore"></div>
+
+        <div id="recipe"></div>
+    </section>
+
+</body>
+</html>
